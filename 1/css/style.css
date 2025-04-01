@@ -1,0 +1,45 @@
+*{
+    background-color: #fff;
+    font-family: avenir;
+}
+@font-face {
+    font-family: avenir;
+    src: url(fonts/AvenirLTStd-Roman.otf) format("truetype");
+    font-weight: 500;
+}
+.header{
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    h1{
+        font-size: xx-large;
+    }
+}
+p{
+    color: rgba(37, 37, 37, 0.8);
+    line-height: 1.5;
+}
+button{
+    background: #252525;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 10px;
+    border-color: #252525;
+}
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+    /* Define columnas y filas */
+    gap: 10px; 
+    /* define el espaciado entre imágenes */
+    max-width: 1200px; /* tama;o maxzimo de la caja */
+    margin: auto;
+}
+.nav img{
+    width: 100%; 
+    /* que las imágenes ocupen toda la celda */
+    height: auto; 
+    /* mantener la proporción en todas las imagenes */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
