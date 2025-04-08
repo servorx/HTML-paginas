@@ -1,0 +1,50 @@
+*{
+    background-color: #fff;
+    font-family: avenir, sans-serif;
+}
+@font-face{
+    font-family: avenir;
+    src: url(./fonts/AvenirLTStd-Roman.otf) format("truetype");
+    font-weight: 500;
+}
+.header-right{
+    width: 90%;
+    padding: 1%;
+    text-align: left;
+}
+h1{
+    
+}
+p{
+    text-align: left
+}
+button{
+    background: #252525;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+img{
+    padding: 20px;
+    margin: auto;
+    max-width: 1300px;
+
+}
+
+/*Móvil*/
+@media (max-width: 767px){
+    
+}
+
+/*Tablet */
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+
+/* Escritorio */
+@media (min-width: 1024px){
+
+}

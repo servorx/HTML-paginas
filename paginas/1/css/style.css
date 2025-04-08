@@ -1,45 +1,79 @@
-*{
+* {
     background-color: #fff;
-    font-family: avenir;
+    font-family: avenir, sans-serif;
 }
+
 @font-face {
     font-family: avenir;
     src: url(fonts/AvenirLTStd-Roman.otf) format("truetype");
     font-weight: 500;
 }
-.header{
-    width: 400px;
+
+.header {
+    width: 90%; /* se ajusta para el tama;o en movil */
+    max-width: 400px; /* maximo tama;o en escritorio */
     text-align: center;
     margin: auto;
-    h1{
-        font-size: xx-large;
-    }
 }
-p{
+
+h1 {
+    font-size: 24px; /* Tamaño base */
+}
+
+p {
     color: rgba(37, 37, 37, 0.8);
     line-height: 1.5;
 }
-button{
+
+button {
     background: #252525;
     color: #fff;
     padding: 13px 30px;
     border-radius: 10px;
-    border-color: #252525;
+    border: none;
+    cursor: pointer;
 }
+
 .nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(2, auto);  
-    /* Define columnas y filas */
-    gap: 10px; 
-    /* define el espaciado entre imágenes */
-    max-width: 1200px; /* tama;o maxzimo de la caja */
+    grid-template-columns: 1fr; /* Móvil: 1 columna */
+    gap: 10px; /* Espaciado entre imágenes */
+    max-width: 1200px; 
     margin: auto;
 }
-.nav img{
+
+.nav img {
     width: 100%; 
-    /* que las imágenes ocupen toda la celda */
     height: auto; 
-    /* mantener la proporción en todas las imagenes */
-    border-radius: 10px; /* Bordes redondeados opcionales */
+    border-radius: 10px;
+}
+
+/*Móvil*/
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 20px; /* Reducir tamaño del título */
+    }
+    .nav {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+
+/*Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header h1 {
+        font-size: 22px;
+    }
+    .nav {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+    .header h1 {
+        font-size: 26px;
+    }
+    .nav {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
 }
