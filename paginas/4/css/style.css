@@ -1,25 +1,94 @@
 *{
     background-color: #fff;
     font-family: avenir, sans-serif;
+    box-sizing: border-box;
 }
 @font-face{
     font-family: avenir;
     src: url(./fonts/AvenirLTStd-Roman.otf) format("truetype");
     font-weight: 500;
 }
-
-
-/*Móvil*/
-@media (max-width: 767px){
-    
+button{
+    background: #252525;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
 }
 
-/*Tablet */
-@media (min-width: 768px) and (max-width: 1023px){
+h1{
+    color: #252525;
+    font-weight: 900;
+    font-size:5rem;
+    margin: 0;
+}
 
+p {
+    color: #25252580;
+    font-size: 1.5rem;
+}
+
+span{
+    color: #25252580;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+aside{
+    margin: 0;
+    max-width: 100%;
+}
+
+body{
+    display: flex;
+}
+
+.content-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5rem;
+    align-items: left;
+    width: 50%;
+    min-width: 300px;
+}
+
+/* Movil */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    p, span {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .content-right {
+        width: 100%;
+        margin: 2rem 1rem;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1rem;
+    }
 }
 
 /* Escritorio */
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
+    body {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
+    .content-right {
+        margin: 5rem;
+        width: 40%;
+    }
 }

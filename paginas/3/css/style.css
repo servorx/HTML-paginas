@@ -1,23 +1,44 @@
 *{
     background-color: #fff;
     font-family: avenir, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
 @font-face{
     font-family: avenir;
     src: url(./fonts/AvenirLTStd-Roman.otf) format("truetype");
     font-weight: 500;
 }
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: max-content;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que se acomode en pantallas pequeñas */
+}
+
 .header-right{
-    width: 90%;
-    padding: 1%;
     text-align: left;
 }
-h1{
-    
+.main-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
-p{
-    text-align: left
+
+.main-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
+
 button{
     background: #252525;
     color: #fff;
@@ -27,24 +48,32 @@ button{
     cursor: pointer;
 }
 
-img{
-    padding: 20px;
-    margin: auto;
-    max-width: 1300px;
+/* Móvil */
+@media (max-width: 767px) {
+    .main-section {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .header-right {
+        text-align: center;
+    }
 }
 
-/*Móvil*/
-@media (max-width: 767px){
-    
-}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-section {
+        flex-direction: column;
+    }
 
-/*Tablet */
-@media (min-width: 768px) and (max-width: 1023px){
-
+    .header-right {
+        text-align: center;
+    }
 }
 
 /* Escritorio */
-@media (min-width: 1024px){
-
+@media (min-width: 1024px) {
+    .main-section {
+        flex-direction: row;
+    }
 }
