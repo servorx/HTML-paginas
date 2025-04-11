@@ -17,175 +17,164 @@ body {
 }
 
 .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.main-section {
     display: flex;
-    min-height: 100vh;
-    padding: 4rem 6rem;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
-.left-section {
-    width: 40%;
+.text-content {
+    width: 45%;
     padding-right: 2rem;
-    position: relative;
 }
 
-.title-block h1 {
-    font-size: 4rem;
+.main-title {
+    font-size: 3.5rem;
     font-weight: 700;
-    color: #000;
     line-height: 1.1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .description {
     font-size: 1rem;
     line-height: 1.6;
-    color: #000;
-    margin: 2rem 0;
-    max-width: 90%;
-    opacity: 0.8;
+    margin-bottom: 2rem;
 }
 
-.explore-button {
-    background-color: #252525;
+.menu-button {
+    background-color: #333;
     color: #fff;
     border: none;
-    padding: 12px 30px;
+    padding: 12px 25px;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
-.spiral-decoration {
-    position: absolute;
-    top: 100rem;
-    left: 0;
-    width: 120px;
+
+.food-image {
+    width: 50%;
+
 }
 
-.right-section {
-    width: 60%;
-    position: relative;
-}
-
-.wave-decoration {
-    position: absolute;
-    top: 0;
-    left: 10rem;
-    width: 200px;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1.5rem;
-    margin-top: 3rem;
-    position: relative;
-}
-
-.image-item img {
+.food-image img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    /* para la resolucion movil */
 }
 
-.large-image {
-    grid-column: 1;
-    grid-row: 1 / span 2;
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.blue-image {
-    grid-column: 2;
-    grid-row: 1;
+.ingredients-gallery {
+    display: flex;
+    gap: 1.5rem;
+    width: 60%;
 }
 
-.model-image {
-    grid-column: 2;
-    grid-row: 2;
+.ingredient-item {
+    margin: 1rem;
+    overflow: hidden;
+    flex: 1;
 }
 
-.star-decoration {
-    position: absolute;
-    width: 100px;
-    z-index: 1;
+.chef-info {
+    width: 45%;
+    padding-left: 2rem;
 }
 
-.star-decoration-top {
-    top: -50px;
-    right: -20px;
-}
-
-.star-decoration.bottom {
-    bottom: -30px;
-    right: 40%;
-}
-
-.footer {
+.chef-title {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 80%;
-    margin-left: auto;
+    margin-bottom: 1rem;
 }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
-    object-fit: cover;
+.chef-info h2 {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-.footer p {
-    font-size: 0.9rem;
-    line-height: 1.5;
+.chef-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
+.ingredient-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.icon {
+    width: 5rem;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .main-section {
         flex-direction: column;
-        padding: 2rem 3rem;
+        align-items: center;
+        text-align: center;
     }
-    
-    .left-section,
-    .right-section {
+    .text-content {
         width: 100%;
-        padding-right: 0;
+        padding: 0;
+        margin-bottom: 2rem;
     }
-    
-    .left-section {
-        margin-bottom: 3rem;
+    .main-title {
+        font-size: 2.2rem;
     }
-    
-    .title-block h1 {
-        font-size: 2.8rem;
+    .description {
+        font-size: 0.95rem;
     }
-    
-    .image-grid {
-        margin-top: 2rem;
+    .menu-button {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
-    
-    .testimonial {
-        max-width: 100%;
+    .food-image {
+        width: 100%;
     }
-    .spiral-decoration,
-    .wave-decoration {
-        width: 50px;
+    .bottom-section {
+        flex-direction: column;
+        gap: 2rem;
     }
-    .image-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    .ingredients-gallery {
+        flex-direction: column;
+        width: 100%;
     }
-    .large-image,
-    .blue-image,
-    .model-image {
-        grid-column: 1;
-        grid-row: auto;
+    .ingredient-item {
+        margin: 0;
     }
-    .star-decoration {
-        display: none;
+    .chef-info {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+    }
+    .chef-info h2 {
+        font-size: 1.6rem;
+    }
+    .chef-description {
+        font-size: 1rem;
+    }
+    .ingredient-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .icon {
+        width: 4rem;
     }
 }

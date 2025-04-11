@@ -3,6 +3,10 @@
     margin: 3rem;
 }
 
+h1{
+    color: #fff;
+    font-size: 5rem;
+}
 button{
     color: #fff;
     background-color: #000;
@@ -11,5 +15,6 @@ button{
     border: 1px solid #000;
     border-radius: 10rem;
     font-size: larger;
+    cursor: pointer;
 }
 
