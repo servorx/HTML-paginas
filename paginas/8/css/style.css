@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: avenir, sans-serif;
+}
+
+@font-face {
+    font-family: avenir;
+    src: url(./fonts/AvenirLTStd-Roman.otf) format("opentype");
+    font-weight: 500;
+}
+
+body {
+    background-color: #9C2004;
+    color: #fff;
+    padding: 2rem;
+}
+
+button{
+    background: #E5B94B;
+    color: #080808;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+}
+
+p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.core{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    padding-right: 4rem;
+}
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: relative;
+    max-height: 50rem;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+    p{
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+    .core{
+        grid-template-columns: 1fr ;
+        text-align: center;
+    }
+    .hero img{
+        width: 90%;
+    }
+    button{
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
