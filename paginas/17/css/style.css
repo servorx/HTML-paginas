@@ -16,176 +16,171 @@ body {
     color: #363830;
 }
 
+.hero-section {
+    padding: 5rem 0;
+}
+
 .container {
+    padding: 0 2rem;
+}
+
+.hero-content {
     display: flex;
-    min-height: 100vh;
-    padding: 4rem 6rem;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.left-section {
-    width: 40%;
-    padding-right: 2rem;
-    position: relative;
+.hero-text {
+    width: 45%;
 }
 
-.title-block h1 {
+.main-title {
     font-size: 4rem;
-    font-weight: 700;
-    color: #000;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
-    color: #000;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     max-width: 90%;
-    opacity: 0.8;
 }
 
 .explore-button {
-    background-color: #252525;
-    color: #fff;
+    background-color: #a67c52;
+    color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
-.spiral-decoration {
-    position: absolute;
-    top: 100rem;
-    left: 0;
-    width: 120px;
-}
 
-.right-section {
-    width: 60%;
+.coffee-images {
+    width: 50%;
     position: relative;
 }
 
-.wave-decoration {
-    position: absolute;
-    top: 0;
-    left: 10rem;
-    width: 200px;
-}
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 1.5rem;
-    margin-top: 3rem;
+.stats-section {
+    padding: 3rem 0;
     position: relative;
 }
 
-.image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-.large-image {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-}
-
-.blue-image {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.model-image {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.star-decoration {
-    position: absolute;
-    width: 100px;
-    z-index: 1;
-}
-
-.star-decoration-top {
-    top: -50px;
-    right: -20px;
-}
-
-.star-decoration.bottom {
-    bottom: -30px;
-    right: 40%;
-}
-
-.footer {
+.stats-container {
+    background-color: #f2e6d9;
+    border-radius: 50px;
+    padding: 2rem;
     display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 10px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.coffee-icon {
+    width: 3rem;
+    margin: 0 auto 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    font-size: 1rem;
     max-width: 80%;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
+.gallery-section {
+    background-color: #333;
+    padding: 4rem 0;
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 15rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: max-content;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.footer p {
-    font-size: 0.9rem;
-    line-height: 1.5;
+.gallery-caption {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #ccc;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+    .hero-content {
         flex-direction: column;
-        padding: 2rem 3rem;
+        text-align: center;
+        gap: 2rem;
     }
-    
-    .left-section,
-    .right-section {
+    .hero-text {
         width: 100%;
-        padding-right: 0;
+        text-align: justify;
     }
-    
-    .left-section {
-        margin-bottom: 3rem;
+    .main-title {
+        font-size: 2.5rem;
     }
-    
-    .title-block h1 {
-        font-size: 2.8rem;
-    }
-    
-    .image-grid {
-        margin-top: 2rem;
-    }
-    
-    .testimonial {
+    .description {
+        font-size: 1rem;
         max-width: 100%;
+        margin: 0 auto 2rem;
     }
-    .spiral-decoration,
-    .wave-decoration {
-        width: 50px;
+    .explore-button {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
-    .image-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    .coffee-images img{
+        width: 15rem;
+        margin-left: -4rem;
     }
-    .large-image,
-    .blue-image,
-    .model-image {
-        grid-column: 1;
-        grid-row: auto;
+    .stats-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        border-radius: 30px;
     }
-    .star-decoration {
-        display: none;
+    .coffee-icon {
+        width: 2.5rem;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-text {
+        font-size: 0.95rem;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .gallery-item {
+        width: 90%;
+    }
+    .gallery-caption {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
