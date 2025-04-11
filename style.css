@@ -1,8 +1,15 @@
 *{
-    background-color: #005;
+    background-color: #008;
+    margin: 3rem;
 }
 
 button{
     color: #fff;
     background-color: #000;
+    margin: 5rem;
+    padding: 2rem;
+    border: 1px solid #000;
+    border-radius: 10rem;
+    font-size: larger;
 }
+
